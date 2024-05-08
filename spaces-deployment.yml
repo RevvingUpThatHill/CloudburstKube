@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: exa-spaces
+  labels:
+    app: exa-spaces
+  namespace: management
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: exa-spaces
+  template:
+    metadata:
+      labels:
+        app: exa-spaces
+    spec:
+      containers:
+      - name: exa-spaces
+        image: exa-spaces:latest
+        ports:
+        - containerPort: 9002
