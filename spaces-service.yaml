@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: exa-spaces
+  name: spaces
 spec:
   type: ClusterIP
   ports:
     - targetPort: 9002
       port: 9002
   selector:
-    name: exa-spaces
+    name: spaces
